@@ -24,12 +24,26 @@
     // add validatePassword function here
 
     let firstname = myForm.firstname.value; // get text of firstname field
+    let lastname = myForm.lastname.value;
+    let password = myForm.password.value;
 
-    /* Form validation code goes here
-    */
+    //document.write(firstname);
+    //document.write(lastname);
+    //document.write(password);
 
-    // use this syntax to update 'message' DIV with appropriate wording
-    $("#message").html("message");
+    /* Form validation code goes here */
+    if (firstname.length == 0 || lastname.length == 0 || password.length == 0) {   
+      // use this syntax to update 'message' DIV with appropriate wording
+      $("#message").html("please enter something in the fields");
+      return false; // prevent page reload
+    } else {
+      $("#message").html("kick in validatePassword function");
+      //validatePassword(password);
+    }
+    return true; // prevent page reload
+  }
+
+  const validatePassword = (myForm) => {
 
     return false; // prevent page reload
   }
