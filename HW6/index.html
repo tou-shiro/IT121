@@ -1,4 +1,9 @@
 <!doctype html>
+
+<!-- IT121 HW6 - Find & Replace by Shiro 11/10/2024 -->
+<!-- This is a web page to test the JQuery selectors and manipulation commands. -->
+
+
 <html>
   <head>
     <meta charset=utf8>
@@ -63,13 +68,13 @@ let ul = document.querySelectorAll("ul:has(.mild)");
 //6. Find all spans with a "data-x" attribute
 var dataX = document.querySelectorAll("span[data-x]");
 //7. Change the elements with a class of "purple" to have a background of "magenta"
-
+$(".purple").css("background-color", "magenta");
 //8. Change the contents of the element with class "continent" to contain "Australia"
-
+$(".continent").html("Australia");
 //9. Add a class of "stripe" to all odd-numbered list items inside section tags
-
+$("section li:odd").addClass("stripe");
 //10. Remove the class of "facts" from the <main> element
-
+$("main").removeClass("facts");
 
 </script>
 
