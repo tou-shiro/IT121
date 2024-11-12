@@ -51,17 +51,17 @@ YOUR CODE GOES HERE: complete the following items to make the tests pass. For ta
 */
 
 //1. Find all span tags on the page, and store the result in the variable below
-let spans = null;
+let spans = document.getElementsByTagName("span");
 //2. Find all tags with a class of "severe" and store the result
-let severe = null;
+let severe = document.getElementsByClassName("severe");
 //3. Find the element with an id of "warnings"
-let warnings = null;
+let warnings = document.getElementById("warnings");
 //4. Find the <li> tags located inside of the element with ID of "warnings"
-let warningItems = null;
+let warningItems = document.querySelectorAll("#warnings li");
 //5. Find the <ul> tag that contains an element with a class of "mild"
-let ul = null;
+let ul = document.querySelectorAll("ul:has(.mild)");
 //6. Find all spans with a "data-x" attribute
-var dataX = null;
+var dataX = document.querySelectorAll("span[data-x]");
 //7. Change the elements with a class of "purple" to have a background of "magenta"
 
 //8. Change the contents of the element with class "continent" to contain "Australia"
