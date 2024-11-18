@@ -15,7 +15,12 @@
     </style>
 
     <body>
-        <div id="buttons"></div>
+        <div id="buttons">
+            <button id="Gryff_button">Gryffindor</button>
+            <button id="Huff_button">Hufflepuff</button>
+            <button id="Sly_button">Slytherin</button>
+            <button id="Rav_button">Ravenclaw</button>
+        </div>
         <table border='1'>
             <tr>
                 <th>name</th>
@@ -48,6 +53,18 @@
         ];
 
         $(document).ready(function(){
+    
+        const after_Gryff_button = document.getElementById('Gryff_button'); 
+
+        after_Gryff_button.addEventListener('click', function(){  
+            this.innerHTML = "thanks for clicking";  
+        });  
+
+        const after_Huff_button = document.getElementById('Huff_button'); 
+
+        after_Huff_button.addEventListener('click', function(){  
+            this.innerHTML = "thanks for clicking";  
+        });  
 
         /*
         - add a button for each 'house' value
@@ -59,7 +76,7 @@
         - add click handler to reset table 
         */
 
-        });
+    });
 
         </script>
 </html>
