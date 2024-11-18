@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worldwide Weather Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    #carousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      width: 66.66%; /* Two-thirds of the page */
+    }
+
+    #left-pane {
+      position:relative;
+      width: calc(80% + 30px); /* 80% of the outer rectangle plus space for 15px text */
+      border: 5px solid #3498db; /* Border color for the outer rectangle */
+      background-color: #2980b9; /* Fill color for the outer rectangle */
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #location-info {
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      color: white; /* Text color for location information */
+      background-color: #3498db; /* Background color for location info */
+    }
+
+    #location-info h2,
+    #location-info p {
+      margin: 0;
+    }
+
+    #left-pane img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the entire container */
+      border: 5px solid #3498db; /* Outline the image with a thicker border */
+    }
+
+    #right-pane {
+      width: 33.33%; /* One-third of the page */
+      padding: 20px;
+      text-align:center;
+    }
+
+    #parameters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .parameter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #3498db; /* Border color for each parameter */
+      padding: 10px;
+    }
+
+    .parameter img {
+      margin-bottom: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .larger_a_margin{
+      margin-right: 30px;
+    }
+    .smaller_a_margin{
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="carousel">
+    <div id="left-pane">
+      <!-- Placeholder image with 16:9 aspect ratio -->
+	  <img src="https://d13k13wj6adfdf.cloudfront.net/urban_areas/seattle-9bc4830d22.jpg" alt="Location Image">
+//      <img src="https://via.placeholder.com/1920x1080" alt="Location Image">
+      <div id="location-info">
+        <a class="larger_a_margin">Location Name<a>
+        <a class="smaller_a_margin">Latitude: 40.7128</a>
+        <a class="smaller_a_margin">Longitude: -74.0060</a>
+      </div>
+    </div>
+    <div id="right-pane">
+      <div id="parameters">
+        <!-- Placeholder parameters -->
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Temperature</a>
+        </div> 
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Feels Like</a>
+        </div>
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Current Conditions</a>
+        </div> 
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Humidity</a>
+        </div>
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Precipitation</a>
+        </div> 
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Wind Conditions</a>
+        </div>
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>Visibility</a>
+        </div> 
+        <div class="parameter">
+          <img src="https://via.placeholder.com/50" alt="Icon">
+          <a>UV Index</a>
+        </div>
+        <!-- Repeat for other parameters -->
+        <!-- ... -->
+      </div>
+    </div>
+  </div>
+  <button onclick="loadRandomLocation()">Load Random Location</button>
+
+  <script>
+    function loadRandomLocation() {
+      // Implement logic to load a random location and update content
+      // You can use JavaScript to
+    }
+  </script>

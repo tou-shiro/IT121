@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Display Image</title>
+</head>
+<body>
+
+
+  <img id="output" src="" alt="Displayed Image">
+
+<!--  <script src="test_script.js"></script> -->
+
+
+<script>
+
+let imageObjects = [
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image(),
+  new Image()
+];
+
+// Set image sources
+imageObjects[0].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/seattle-9bc4830d22.jpg'; //Seattle
+imageObjects[1].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/berlin-c96f97c4ba.jpg'; //Berlin
+imageObjects[2].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/new-york-9cb6cc2ae5.jpg'; //New York
+imageObjects[3].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/manila-5150275531.jpg'; //Manila
+imageObjects[4].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/london-12fdfd9fcf.jpg'; //London
+imageObjects[5].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/paris-0ae0bb626e.jpg'; //Paris
+imageObjects[6].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/tokyo-5d21b97864.jpg'; //Tokyo
+imageObjects[7].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/beijing-536dacdadf.jpg'; //Beijing
+imageObjects[8].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/adelaide-3b1b936db3.jpg'; //Adelaide
+imageObjects[9].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/johannesburg-6f2d7ccc07.jpg'; //Johannesburg
+imageObjects[10].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/cairo-ba88a8816b.jpg'; //Cairo
+imageObjects[11].src = 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/rio-de-janeiro-448ecb9d55.jpg'; //Rio De Janeiro
+
+// Displaying the first image in the 'output' <img> tag
+document.getElementById("output").src = imageObjects[0].src;
+</script>
+
+</body>
+</html>

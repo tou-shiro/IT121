@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Give the app a title to display in the browser tab -->
+  <title>Worldwide Weather Carousel</title>
+
+  <!-- Linking to an external CSS file named style.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Create a div for the entire carousel -->
+  <div id="carousel">
+    <!-- Create a div for the left pane -->
+    <div id="left-pane">
+      <!-- Add an id for the 1920x1024 image that will be shown in the left pane -->
+      <img id="left-pane-image" src="" alt="Location Image">
+      <!-- Create a div for the location data that will be shown below the image in the left pane -->
+      <div id="location-info">
+        <!-- Style location data using inline controls so that they lay out horizontally -->
+        <!-- Make separation between location name and location lat/lon greater than between lat and lon -->
+        <a id="location" class="larger_a_margin">Location Name<a>
+            <a id="lat" class="smaller_a_margin">Latitude: </a>
+            <a id="lon" class="smaller_a_margin">Longitude: </a>
+      </div>
+    </div>
+    <!-- Create a div for the right pane -->
+    <div id="right-pane">
+      <!-- Create a div, styled as a grid for the weather parameters in the right pane -->
+      <div id="parameters">
+        <!-- Inherit grid style from parameters and layout grid in columns -->
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="temp" style="font-size: 30px"></span>
+          <a>Temperature</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="feels" style="font-size: 30px"></span>
+          <a>Feels Like</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an image element with an id to hold the current weather icon -->
+          <img id="curr_icon" style="width: 64px; height: 64px; margin-bottom: 10px; object-fit: cover; background-color: aliceblue" src="" alt="Current Conditions Icon">
+          <a>Current Conditions</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="wind" style="font-size: 30px; height: 64px; display: inline-block"></span>
+          <a style="margin-top: 10px">Wind Conditions</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="humidity" style="font-size: 30px"></span>
+          <a>Humidity</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="precip" style="font-size: 30px"></span>
+          <a>Precipitation</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="viz" style="font-size: 30px"></span>
+          <a>Visibility</a>
+        </div>
+        <div class="parameter">
+          <!-- Add an id for a span element that will hold a number -->
+          <span id="uv_idx" style="font-size: 30px"></span>
+          <a>UV Index</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Create a button element that will be called on load -->
+  <button id="load-weather" onclick="loadData()">Load Random Location</button>
+
+ <!-- Link to an external JavaScript file named script.js -->
+ <script src="script.js"></script>
+
+</body>
+
+</html>

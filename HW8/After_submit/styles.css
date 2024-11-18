@@ -1,0 +1,145 @@
+/* style.css - dedicated CSS file for styling the container div and the layout */
+
+/* Main body style of the page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: grey;
+}
+
+/* Styling for the Carousel to give it a unified look-n-feel */
+#carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 66.66%;
+  height: 50vh;
+}
+
+/* Styling the left pane to contain an inner and outer rectangle to create a frame and room for 
+   the location info text display */
+#left-pane {
+      position: relative;
+      width: calc(80% + 30px);
+      /* 80% of the outer rectangle plus space for 15px text */
+      height: 100%;
+      border: 5px solid #3498db;
+      /* Border color for the outer rectangle */
+      background-color: #3498db;
+      /* background-color: black; */
+      /* Fill color for the outer rectangle */
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Control for how the image shoud be displayed in the left pane - the key parameter is object-fit */
+    #left-pane-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensure the image covers the entire container */
+      border: 5px solid #3498db;
+      /* Outline the image with a thicker border */
+    }
+
+    /* Control for location info */
+    #location-info {
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      color: white;
+      /* Text color for location information */
+      background-color: black;
+      /* Background color for location info */
+    }
+
+   /* Control to ensure that tags used in location info don't use their default height */ 
+    #location-info h2,
+    #location-info p {
+      margin: 0;
+    }
+
+    /* Control to give the right pane a third of the screen horizontally, have padding and centered text */
+    #right-pane {
+      width: 33.33%;
+      /* One-third of the page */
+      padding: 20px;
+      /* border-color: #3498db; */
+      text-align: center;
+      background-color: #3498db;
+    }
+
+    /* Arrange parameters to display in a grid */
+    #parameters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    /* Style parameters in grid layout */
+    .parameter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #3498db;
+      /* Border color for each parameter */
+      padding: 10px;
+    }
+
+    /* Control to set the size of an emoji that was in place for the png returned by the API during testing
+    .parameter .emoji {
+      font-size: 40px;
+    }
+    */
+
+    /* Giving the current weather png a small bottom margin */
+    .parameter img {
+      margin-bottom: 5px;
+    }
+
+    /* Control to ensure that all inline text is bold */
+    .parameter a {
+      font-weight: bold;
+    }
+
+    /* Style the single button in the app */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    /* Implement a button hover style to provide a slight cue to the user */
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Control to allow for larger spacing between the location name and lat/lon */
+    .larger_a_margin {
+      margin-right: 30px;
+    }
+
+    /* Control for smaller spacing between lat and long */
+    .smaller_a_margin {
+      margin-right: 10px;
+    }

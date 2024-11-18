@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: grey;
+}
+
+#carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 66.66%;
+  //width: 800px;
+  height: 50vh;
+}
+
+#left-pane {
+      position: relative;
+      width: calc(80% + 30px);
+	  //width: 500px;
+      /* 80% of the outer rectangle plus space for 15px text */
+      height: 100%;
+      border: 5px solid #3498db;
+      /* Border color for the outer rectangle */
+      background-color: #3498db;
+      /* background-color: black; */
+      /* Fill color for the outer rectangle */
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #left-pane-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensure the image covers the entire container */
+      border: 5px solid #3498db;
+      /* Outline the image with a thicker border */
+    }
+
+    #location-info {
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      color: white;
+      /* Text color for location information */
+      /* background-color: #3498db; */
+      background-color: black;
+      /* Background color for location info */
+    }
+
+    #location-info h2,
+    #location-info p {
+      margin: 0;
+    }
+
+    #right-pane {
+      width: 33.33%;
+      /* One-third of the page */
+
+      padding: 20px;
+      /* border-color: #3498db; */
+      text-align: center;
+      background-color: #3498db;
+    }
+
+    #parameters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      /* align-items: flex-end; */
+    }
+
+    .parameter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #3498db;
+      /* Border color for each parameter */
+      padding: 10px;
+    }
+
+    .parameter .emoji {
+      font-size: 40px;
+    }
+
+    .parameter img {
+      margin-bottom: 5px;
+    }
+
+    .parameter a {
+      /* margin-top: auto; /* This aligns the <a> to the bottom */
+      /* vertical-align: bottom; */
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .larger_a_margin {
+      margin-right: 30px;
+    }
+
+    .smaller_a_margin {
+      margin-right: 10px;
+    }

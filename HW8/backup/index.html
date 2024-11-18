@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Weather Puller</title> -->
+  <!-- New Title -->
+  <title>Worldwide Weather Carousel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- 
+    <p>Using API: <a href="https://www.weatherapi.com/">www.weatherapi.com</a></p>
+    <br>
+    <button id="load-weather">Load Weather</button>
+    <div id="weatherVisual"></div>
+    -->
+  <!-- New body section with divs for layout of UI -->
+  <div id="carousel">
+    <div id="left-pane">
+      <!-- Placeholder image with 16:9 aspect ratio -->
+      <img id="left-pane-image" src="" alt="Location Image">
+      <!--      <img src="/Users/dgr/devstuff/1920by1080icon.png" alt="Location Image"> -->
+      <div id="location-info">
+        <a id="location" class="larger_a_margin">Location Name<a>
+            <a id="lat" class="smaller_a_margin">Latitude: </a>
+            <a id="lon" class="smaller_a_margin">Longitude: </a>
+      </div>
+    </div>
+    <div id="right-pane">
+      <div id="parameters">
+        <!-- Placeholder parameters -->
+        <div class="parameter">
+          <span id="temp" style="font-size: 30px"></span>
+          <!--          <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Placeholder Image"> -->
+          <a>Temperature</a>
+        </div>
+        <div class="parameter">
+          <span id="feels" style="font-size: 30px"></span>
+          <!--          <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a>Feels Like</a>
+        </div>
+        <div class="parameter">
+          <!-- <span id="curr_cond" style="width: 50px; height: 50px; margin-bottom: 10px;" class="emoji">&#x1F327</span> -->
+          <img id="curr_icon" style="width: 64px; height: 64px; margin-bottom: 10px; object-fit: cover; background-color: aliceblue" src="" alt="Current Conditions Icon">
+          <a>Current Conditions</a>
+        </div>
+        <div class="parameter">
+          <span id="wind" style="font-size: 30px; height: 64px; display: inline-block"></span>
+          <!-- <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a style="margin-top: 10px">Wind Conditions</a>
+        </div>
+        <div class="parameter">
+          <span id="humidity" style="font-size: 30px"></span>
+          <!-- <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a>Humidity</a>
+        </div>
+        <div class="parameter">
+          <span id="precip" style="font-size: 30px"></span>
+          <!-- <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a>Precipitation</a>
+        </div>
+        <div class="parameter">
+          <span id="viz" style="font-size: 30px"></span>
+          <!-- <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a>Visibility</a>
+        </div>
+        <div class="parameter">
+          <span id="uv_idx" style="font-size: 30px"></span>
+          <!-- <img src="/Users/dgr/devstuff/50by50greyicon.png" alt="Icon"> -->
+          <a>UV Index</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="load-weather" onclick="loadData()">Load Random Location</button>
+
+ <script src="script.js"></script>
+
+</body>
+
+</html>
