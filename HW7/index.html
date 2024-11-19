@@ -1,3 +1,6 @@
+<!-- IT121 HW7 - Potterific by Shiro 11/10/2024 -->
+<!-- Let's turn our attention to the magical world of Harry Potter. This week you learned jQuery methods for handling events, filtering DOM objects, and applying styles. -->
+
 <html>
     <head>
         <script
@@ -21,7 +24,8 @@
             <button id="Sly_button">Slytherin</button>
             <button id="Rav_button">Ravenclaw</button>
         </div>
-        <table border='1'>
+        <table border='1' id = "harry_table">
+          <thead>
             <tr>
                 <th>name</th>
                 <th>role</th>
@@ -29,8 +33,12 @@
                 <th>gender</th>
                 <th>alignment</th>
             </tr>
+        </thead>
+            <tbody>
+                <!-- Table rows will be inserted here programatically -->
+            </tbody>
         </table>
-        <button>reset</button>
+        <button id="reset_button">reset</button>
     </body>
         
         <script>
@@ -56,15 +64,124 @@
     
         const after_Gryff_button = document.getElementById('Gryff_button'); 
 
-        after_Gryff_button.addEventListener('click', function(){  
-            this.innerHTML = "thanks for clicking";  
-        });  
+        const after_Huff_button = document.getElementById('Huff_button');
 
-        const after_Huff_button = document.getElementById('Huff_button'); 
+        const after_Sly_button = document.getElementById('Sly_button'); 
 
-        after_Huff_button.addEventListener('click', function(){  
-            this.innerHTML = "thanks for clicking";  
-        });  
+        const after_Rav_button = document.getElementById('Rav_button');  
+
+        const tableBody = document.querySelector("#harry_table tbody");
+        //const tableBody = document.getElementById("harry_table");
+
+        renderRows();
+
+        after_Gryff_button.addEventListener('click', GryffRows);
+
+        after_Huff_button.addEventListener('click', HuffRows);
+
+        after_Sly_button.addEventListener('click', SlyRows);
+
+        after_Rav_button.addEventListener('click', RavRows);
+
+        reset_button.addEventListener('click', renderRows);
+
+        function renderRows() {
+            // Display character names
+            let rows = "";
+            // Loop through characters and display their names
+            for (let i = 0; i < characters.length; i++) {
+                rows += "<tr>";
+                rows += "<th>" + characters[i].name + "</th>";
+                rows += "<th>" + characters[i].role + "</th>";
+                rows += "<th>" + characters[i].house + "</th>";
+                rows += "<th>" + characters[i].gender + "</th>";
+                rows += "<th>" + characters[i].alignment + "</th>";
+                rows += "</tr>";
+            }
+
+            // Output the names to the div with id 'demo'
+            tableBody.innerHTML = rows;
+        }
+
+        function GryffRows() {
+            // Display character names
+            let rows = "";
+            // Loop through characters and display their names
+            for (let i = 0; i < characters.length; i++) {
+                if (characters[i].house == "Gryffindor") {
+                rows += "<tr>";
+                rows += "<th>" + characters[i].name + "</th>";
+                rows += "<th>" + characters[i].role + "</th>";
+                rows += "<th>" + characters[i].house + "</th>";
+                rows += "<th>" + characters[i].gender + "</th>";
+                rows += "<th>" + characters[i].alignment + "</th>";
+                rows += "</tr>";
+                }
+            }
+            // Output the names to the div with id 'demo'
+            tableBody.innerHTML = rows;
+        }
+
+        function HuffRows() {
+            // Display character names
+            let rows = "";
+            // Loop through characters and display their names
+            for (let i = 0; i < characters.length; i++) {
+                if (characters[i].house == "Hufflepuff") {
+                rows += "<tr>";
+                rows += "<th>" + characters[i].name + "</th>";
+                rows += "<th>" + characters[i].role + "</th>";
+                rows += "<th>" + characters[i].house + "</th>";
+                rows += "<th>" + characters[i].gender + "</th>";
+                rows += "<th>" + characters[i].alignment + "</th>";
+                rows += "</tr>";
+                }
+            }
+            // Output the names to the div with id 'demo'
+            tableBody.innerHTML = rows;
+        }
+
+        function SlyRows() {
+            // Display character names
+            let rows = "";
+            // Loop through characters and display their names
+            for (let i = 0; i < characters.length; i++) {
+                if (characters[i].house == "Slytherin") {
+                rows += "<tr>";
+                rows += "<th>" + characters[i].name + "</th>";
+                rows += "<th>" + characters[i].role + "</th>";
+                rows += "<th>" + characters[i].house + "</th>";
+                rows += "<th>" + characters[i].gender + "</th>";
+                rows += "<th>" + characters[i].alignment + "</th>";
+                rows += "</tr>";
+                }
+            }
+            // Output the names to the div with id 'demo'
+            tableBody.innerHTML = rows;
+        }
+
+        function RavRows() {
+            // Display character names
+            let rows = "";
+            // Loop through characters and display their names
+            for (let i = 0; i < characters.length; i++) {
+                if (characters[i].house == "Ravenclaw") {
+                rows += "<tr>";
+                rows += "<th>" + characters[i].name + "</th>";
+                rows += "<th>" + characters[i].role + "</th>";
+                rows += "<th>" + characters[i].house + "</th>";
+                rows += "<th>" + characters[i].gender + "</th>";
+                rows += "<th>" + characters[i].alignment + "</th>";
+                rows += "</tr>";
+                }
+            }
+            // Output the names to the div with id 'demo'
+            tableBody.innerHTML = rows;
+        }
+
+        //after_Gryff_button.addEventListener('click', function(){  
+        //    this.innerHTML = "thanks for clicking";  
+        //});  
 
         /*
         - add a button for each 'house' value
