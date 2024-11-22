@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<!-- IT121 HW9 - HW 9 - Draw me a picture - by Shiro Ishii 11/24/2024 -->
+<!-- some key methods for 2d drawing with JavaScript and the <canvas> -->
+
+
+    
+    <html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <title>HW 9 - Draw me a picture</title>
+      <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    </head>
+    
+    <body>
+
+        <!-- <canvas id="picasso" height=640 width=480 ></canvas> -->
+        <canvas id="picasso" width="300" height="150" style="border:1px solid grey"></canvas>
+
+        <script>
+            let canvas = document.getElementById('picasso');
+            let context = canvas.getContext('2d');
+            context.fillStyle = "red";
+            context.fillRect(20, 40, 100, 100);
+        </script>
+    
+    </body>
+    
+    </html>
