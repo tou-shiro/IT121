@@ -16,14 +16,63 @@
     
     <body>
 
-        <!-- <canvas id="picasso" height=640 width=480 ></canvas> -->
+        <!-- <canvas id="picasso" height=640 width=480 ></canvas>-->
+
+        <h2>The fillRect() Method</h2>
         <canvas id="picasso" width="300" height="150" style="border:1px solid grey"></canvas>
+
+        <h2>The arc() Method</h2>
+        <canvas id="myCanvas2" width="300" height="150" style="border:1px solid grey"></canvas>
+
+        <h2>The stroke() Method</h2>
+        <canvas id="myCanvas3" width="300" height="150" style="border:1px solid grey"></canvas>
+
+        <h2>The Animation</h2>
+        <canvas id="animationCanvas" width="600" height="300" style="border:1px solid grey"></canvas>
 
         <script>
             let canvas = document.getElementById('picasso');
             let context = canvas.getContext('2d');
             context.fillStyle = "red";
             context.fillRect(20, 40, 100, 100);
+            context.strokeRect(40, 20, 140, 110);
+
+            let canvas2 = document.getElementById('myCanvas2');
+            let context2 = canvas2.getContext('2d');
+            context2.beginPath();
+            context2.arc(100, 75, 50, 0, 2 * Math.PI);
+            context2.fillStyle = "orange";
+            context2.fill();
+
+            const canvas3 = document.getElementById("myCanvas3");
+            const context3 = canvas3.getContext("2d");
+            context3.beginPath();
+            context3.moveTo(20, 20);
+            context3.lineTo(20, 100);
+            context3.lineTo(70, 100);
+            context3.closePath(); 
+            context3.strokeStyle = "red";
+            context3.stroke();
+
+            const animaCanvas = document.getElementById('animationCanvas');
+            const animaContext = animaCanvas.getContext('2d');
+    
+            let xPos = 50;  // Starting X position of the rectangle
+            let speed = 2;  // Speed at which the rectangle moves
+
+            // Function to animate the rectangle
+            function animate() {
+                animaContext.clearRect(0, 0, animaCanvas.width, animaCanvas.height); // Clear the canvas
+                animaContext.fillStyle = 'green';  // Set fill color
+                animaContext.fillRect(xPos, 200, 100, 50); // Draw the rectangle
+
+                xPos += speed;  // Move the rectangle
+                if (xPos > animaCanvas.width) xPos = -100;  // Reset the position when it goes off-screen
+            }
+
+            // Call the animate function every 30ms to update the canvas
+            setInterval(animate, 30);
+
         </script>
     
     </body>
